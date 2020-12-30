@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: "Inter",sans-serif;
+    color:hsl(228, 34%, 66%);
+    background-color:hsl(230, 17%, 14%);
+/* overflow-y: hidden; */
+}
+
+.main{ 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+/* width:100vw;
+height:100vh; */
+}
+.top{
+    width:80%;
+    margin-top:10px;
+    padding-left: 25px;
+    display: flex;
+}
+#toggle{
+    display: flex;
+    margin-top:15px;
+    /* float: right; */
+    position: absolute;
+    right:11%;
+}
+#toggle #text{
+    font-size: 13px;
+    font-weight: bolder; margin:4px 6px;
+}
+.top .switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+  }
+  
+  .top .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .top .switch input:checked + .slider::before {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  
+  .top .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image:linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .top .switch .slider::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color:hsl(230, 17%, 14%);
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+#heading{
+    font-size: 28px;
+    color:white;
+    font-weight: bolder;
+    margin-top:10px;
+}
+#overview{
+    font-size: 26px;
+    font-weight: bolder;
+    color:hsl(228, 34%, 66%);
+}
+#total{
+    font-size:12px;
+    font-weight:bolder;
+    text-transform: capitalize;
+    transform: translateY(-10px);
+    color:hsl(228, 34%, 66%);
+}
+.grids
+{
+    display: grid;
+    /* grid-gap:20px; */
+    grid-template-columns: repeat(4,1fr);
+    width: 80%;
+    margin: auto;
+    color:hsl(228, 34%, 66%);
+    /* margin:100px 20px;  */
+}
+.card_follow,.card_overview{
+    
+    text-align: center;
+    width:200px;
+    height:170px;
+    padding:15px;
+    margin:10px 15px;
+    border-radius: 4px;
+    background-color: hsl(228, 28%, 20%);
+    /* height:150px; */
+}
+
+#site img{
+    margin:2px 10px;
+    transform: translateY(8px);
+}
+#site{
+font-size: 12px;
+font-weight: 700;   
+padding:4px; 
+}
+
+#facebook{
+    border-top: 3px solid hsl(208, 92%, 53%);
+}
+
+#twitter{
+    border-top: 3px solid hsl(203, 89%, 53%);
+}
+#instagram{
+    /* border-top: 3px solid transparent;
+    border-image:linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)); */
+    border-top: 3px solid hsl(329, 70%, 58%);
+}
+#youtube{
+    border-top: 3px solid red;
+}
+#count{
+    font-size: 3.2rem;
+    color:white;
+margin:10px;
+font-weight:bolder;
+}
+.card_overview{
+    border:none;
+    height:80px;
+}
+.card_overview #count{
+    font-size: 2.4rem;
+    text-align: left;
+    margin: 15px 0 0 0;
+}
+.card_overview #increase,.card_overview #decrease{
+text-align: right;
+transform: translateY(-20px);
+}
+#about img{
+    float:right;
+}
+#about{
+    text-align: left;
+}
+#increase{
+    color:hsl(163, 72%, 41%);
+    font-size: 11px;
+    font-weight: bolder;
+}
+#decrease{
+    color:hsl(356, 69%, 56%);
+    font-size: 11px;
+    font-weight: bolder;
+}
+p{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+.attribution
+{
+    position: absolute;
+    bottom:0px;
+    color:grey;
+    width:90%;
+    text-align: center;
+}
+.attribution a{
+    text-decoration: none;
+    padding:0 6px;
+    color:red;
+}
+/* bright */
+.bright #count{
+    color:black;
+}
+.light #heading{
+    color:black;
+}
+.bright {
+    background-color: hsl(227, 47%, 96%);
+}
+.light{
+    background-color: white;
+}
+@media (max-width:1000px)
+{
+    body{
+        overflow-y: scroll;
+    }
+    
+    .grids{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width:850px)
+{
+    .grids{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:580px)
+{
+    .top{
+        display: block;
+        width:90%;
+    }
+    #toggle{
+        position: relative;
+        text-align: left;
+        /* display: block; */
+        width:90%;
+        border-top:1px solid hsl(228, 34%, 66%);
+        padding:10px;
+        border-radius: 4px;
+        margin:10px 20px;
+    }
+    #toggle .switch{
+        position: absolute;
+        right:10px;
+    }
+    .grids{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
